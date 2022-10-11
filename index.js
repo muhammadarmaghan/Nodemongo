@@ -29,10 +29,10 @@ const Department = mongoose.model("Department", {
 });
 Employe.aggregate([{
     $lookup: {
-    From: ‘Department’,
-    LocalField: ‘dept_id’,
-    foreignField: ‘dept_id’,
-    as: ‘Employee_Details’
+    From: "Department",
+    LocalField: "dept_id",
+    foreignField: "dept_id",
+    as: "Employee_Details"
     }}]);
 
 app.post("/sendemp", async (req, res) => {
